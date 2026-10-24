@@ -1,3 +1,3 @@
 # Código fuente
 
-Colocar aquí la implementación. La estructura interna se definirá al elegir las tecnologías; agrupar por funcionalidades y mantener claras las responsabilidades.
+Organización prevista para datos, variables, modelos y priorización. Las subcarpetas contienen guías; la implementación está pendiente. El dashboard se ubicará en `app/`.

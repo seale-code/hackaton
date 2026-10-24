@@ -26,3 +26,16 @@ Thumbs.db
 .vscode/
 .aws/
 .codex/
+
+# Datos y artefactos locales
+/data/raw/*
+!/data/raw/README.md
+/data/interim/*
+!/data/interim/README.md
+/data/processed/*
+!/data/processed/README.md
+/models/*
+!/models/README.md
+*.joblib
+*.pkl
+.ipynb_checkpoints/

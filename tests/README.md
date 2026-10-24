@@ -1,3 +1,3 @@
-# Pruebas
+# Pruebas previstas
 
-Añadir pruebas del comportamiento esperado y de los errores relevantes. Documentar aquí el comando de ejecución al seleccionar el framework de pruebas. Aún no hay pruebas ejecutables.
+Verificar unicidad zona/semana, ceros frente a faltantes, cambios de año, rezagos sin fuga temporal, separación de periodos, contrato de inferencia y ranking con faltantes/empates. Añadir framework y comando al implementar los componentes. Aún no hay pruebas ejecutables.
