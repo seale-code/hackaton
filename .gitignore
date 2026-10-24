@@ -1,0 +1,28 @@
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencias y resultados generados
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+coverage/
+htmlcov/
+dist/
+build/
+.next/
+
+# Archivos locales
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+.aws/
+.codex/
