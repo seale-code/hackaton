@@ -8,7 +8,7 @@ respuesta = requests.get(
     headers={"User-Agent": "Mozilla/5.0"},
     timeout=30)
 respuesta.raise_for_status()
-df = pd.read_csv(BytesIO(respuesta.content))
+df = pd.read_csv(BytesIO(respuesta.content), low_memory=False)
 
 # Seleccionar variables relevantes
 relevante = ["provincia", "distrito", "ano", "semana", "diagnostic", "tipo_dx"]
@@ -16,7 +16,7 @@ relevante = ["provincia", "distrito", "ano", "semana", "diagnostic", "tipo_dx"]
 # Seleccionar únicamente Piura
 df_piura = df[relevante].copy()[df["departamento"] == "PIURA"]
 
-distritos = ['PIURA', 'SULLANA', 'TALARA', 'AYABACA', 'MORROPON', 'HUANCABAMBA', 'SECHURA', 'PAITA']
+provincias = ['PIURA', 'SULLANA', 'TALARA', 'AYABACA', 'MORROPON', 'HUANCABAMBA', 'SECHURA', 'PAITA']
 
 def procesar_distrito(provincia):
     provincia_sele = df_piura[df_piura["provincia"] == provincia]   # Seleccionar el distrito
@@ -26,7 +26,7 @@ def procesar_distrito(provincia):
 
     ano, semana, empty = [], [], []                                 # Crear variables de año, semana y uno vacío
     for y in range(start_year, end_year + 1):                       # Recorrer cada año
-      for w in range(1, 54):                                        # Recorrer cada semana del año
+      for w in range(1, 54):                                    # Recorrer cada semana del año (52 en no bisiesto)
         ano.append(y)                                               # Añadir año, semana y casilla vacía
         semana.append(w)
         empty.append(0)
@@ -45,9 +45,9 @@ def procesar_distrito(provincia):
                    (temporal["semana"] == provincia_sele.iloc[i]["semana"]),   # Aumentar caso correspondiente
                    provincia_sele.iloc[i]["diagnostic"] + provincia_sele.iloc[i]["tipo_dx"]] += 1
 
-    name = "PIURA_" + provincia + ".csv"                         # Darle el nombre adecuado
+    name = "casos_" + provincia.lower() + ".csv"                 # Darle el nombre adecuado
     temporal.to_csv(name, index=False)                           # Guardar el archivo
 
-for i in range(0, len(distritos)):                               # Procesar todos los distritos
-    procesar_distrito(distritos[i])
-    print(str(i) + " - Procesado el distrito " + distritos[i])
+for i in range(0, len(provincias)):                              # Procesar todos los distritos
+    procesar_distrito(provincias[i])
+    print(str(i) + " - Procesado la provincia " + provincias[i])
