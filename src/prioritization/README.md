@@ -1,3 +1,5 @@
-# Ranking de zonas
+# Comparación de alternativas
 
-Implementar criterios, normalización, pesos y desempates una vez validados. Mantener separados riesgo y prioridad. Consultar docs/PRIORIZACION.md desde la raíz.
+Espacio previsto para comparar fechas o itinerarios si se implementa esa ampliación. Reemplaza el propósito anterior de priorizar recursos sanitarios entre zonas de Piura.
+
+No hay ranking ni optimización implementados. Los datos incompletos no producen una alternativa más segura. Ver [criterios y límites](../../docs/PRIORIZACION.md).

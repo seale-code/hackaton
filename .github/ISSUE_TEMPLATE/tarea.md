@@ -1,22 +1,23 @@
 ---
 name: Tarea
-about: Planificar una mejora o tarea concreta
+about: Planificar datos, modelo o producto de la guía del viajero
 title: "[Tarea] "
 labels: ""
 assignees: ""
 ---
 
-## Objetivo
-¿Qué resultado necesitamos y por qué?
+## Resultado esperado
+¿Qué podrá comprobarse y para qué usuario o componente?
 
 ## Alcance
-¿Qué incluye esta tarea?
+Indicar países/áreas, enfermedad y fechas cuando corresponda.
 
 ## Criterios de aceptación
 - [ ] Resultado verificable.
+- [ ] Fuentes, cobertura y límites documentados si se usan datos.
 
-## Prioridad
-P0 / P1 / P2
+## Validación
+¿Cómo se comprobará? Para ML, incluir tarea, horizonte, baseline y partición temporal.
 
-## Dependencias
-Indica si otra tarea debe completarse antes.
+## Dependencias y responsable
+Registrar acuerdos del equipo; no inferir asignaciones.

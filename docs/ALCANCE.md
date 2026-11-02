@@ -1,43 +1,61 @@
-# Alcance del MVP
+# Alcance: guía del viajero en Sudamérica
 
-## Contexto recuperado
+## Definición actual
 
-Esta documentación recoge lo tratado en los chats «Preguntas Para Mentor» y «Nombres para hackatón», revisados el 24 de octubre de 2026. Se conserva la última indicación explícita: enfocarse solo en Piura. Los chats son antecedentes de planificación, no evidencia de disponibilidad de datos ni validación científica.
+Guía inteligente que reúne información sobre dengue, Zika y chikungunya según los destinos y las fechas de un viaje por Sudamérica. Combinaría datos epidemiológicos, estacionalidad e información climática con orientación oficial y estimaciones a corto plazo cuando existan datos y evaluación suficientes.
 
-## Problema y objetivo
+El usuario principal es el viajero. El sistema apoya la preparación informada del recorrido. Las estimaciones corresponden a zonas y periodos, no a la probabilidad individual de infección.
 
-Anticipar incrementos de dengue en zonas de Piura a partir de información epidemiológica y climática, incluyendo indicadores de El Niño, y convertir las estimaciones en una priorización explicable.
+## Dirección confirmada y propuestas de implementación
 
-Usuarios previstos: equipos que analizan información para prevención y planificación territorial. Validar necesidades y flujo con el mentor; no se ha documentado validación con usuarios finales.
-
-## MVP previsto
-
-1. Integrar datos históricos de dengue, clima e indicadores de El Niño.
-2. Entrenar y comparar un baseline con un modelo predictivo sencillo.
-3. Mostrar en un dashboard histórico, estimaciones, limitaciones y factores del modelo.
-4. Ordenar zonas mediante criterios transparentes de priorización.
-
-## Decisiones abiertas
-
-| Decisión | Estado |
+| Aspecto | Estado |
 | --- | --- |
-| Región piloto | Piura, según última indicación del usuario |
-| Unidad geográfica | Provincias o distritos, según datos disponibles |
-| Objetivo | Elegir incremento de casos, número de casos o evento definido de riesgo |
-| Horizonte | Se propuso 2–4 semanas; falta elegir uno y justificarlo |
-| Riesgo bajo/medio/alto | Definición y umbrales pendientes |
-| Tecnologías | Python + pandas + scikit-learn + Streamlit + Plotly propuestos |
-| Priorización | Variables, pesos y restricciones pendientes de validación |
+| Producto | Guía para viajeros según destinos y fechas; dirección actual del proyecto |
+| Ámbito de la idea | Sudamérica; reemplaza el enfoque exclusivo en Piura |
+| Enfermedades de interés | Dengue, Zika y chikungunya |
+| Fuentes y modelo | Integración de información epidemiológica y climática; implementación pendiente |
+| Países del primer piloto | Por seleccionar mediante inventario de datos |
+| Tamaño del piloto | Dos o tres países como propuesta, no como cobertura disponible |
+| Enfermedad del primer modelo | Por elegir según cantidad, continuidad y comparabilidad de registros |
+| Unidad geográfica | País inicialmente; nivel subnacional solo si la fuente lo permite |
+| Objetivo del modelo | Aumento de casos o conteo futuro; debe elegirse uno antes de entrenar |
+| Horizonte | 2–4 semanas como propuesta a validar; un horizonte inicial se fijará en la ficha del experimento |
+| Nombre de marca | Pendiente; no se adopta un nombre definitivo en esta actualización |
+| Stack | Python + pandas + scikit-learn + Streamlit + Plotly propuestos |
 
-## Fuera del MVP
+## Primera versión propuesta
 
-Cobertura nacional, alertas operativas automáticas, asignación real de recursos, predicciones clínicas individuales y optimización compleja. Otras regiones, XGBoost y SHAP quedan como posibles ampliaciones.
+1. Itinerario de varias paradas con fechas de llegada y salida.
+2. Ficha por destino con serie histórica, situación notificada y fecha de corte.
+3. Tendencia predictiva para una enfermedad y territorios evaluados, cuando corresponda.
+4. Orientación y avisos oficiales con enlaces, fechas y ámbito territorial.
+5. Indicación explícita de cobertura insuficiente, faltantes y fechas fuera del horizonte.
+6. Resumen del recorrido que mantenga separados históricos, avisos y estimaciones.
 
-## Criterios de aceptación
+No se necesita una cuenta de usuario ni datos clínicos personales para demostrar este recorrido.
 
-- Dataset reproducible con fuentes, fechas, cobertura y faltantes documentados.
-- Evaluación temporal en periodos no usados para ajustar el modelo.
-- Comparación con baseline y limitaciones visibles, aunque no exista mejora.
-- Dashboard que identifique fecha de corte, horizonte y procedencia de los datos.
-- Ranking reproducible con criterios explícitos, solo si hay varias zonas comparables.
-- Demo completa sin presentar cifras sintéticas como resultados reales.
+## Criterios de aceptación del MVP
+
+- Cada parada se vincula a un identificador territorial y a la escala realmente disponible.
+- No se asignan valores de una serie nacional como si fueran observaciones de una ciudad.
+- Cada dato o aviso tiene fuente, periodo y fecha de actualización visibles.
+- Las estimaciones tienen fecha de corte, horizonte, objetivo y referencia de evaluación.
+- El modelo se compara con un baseline en periodos posteriores al entrenamiento.
+- Fechas fuera del horizonte muestran contexto histórico y avisos, sin extender predicciones.
+- Si no existe cobertura, el resultado indica información insuficiente y no una categoría de seguridad.
+- La demo distingue datos reales, sintéticos y resultados experimentales.
+- La experiencia se prueba con usuarios potenciales antes de afirmar utilidad demostrada.
+
+## Ampliaciones posibles
+
+Comparar fechas o itinerarios alternativos, ampliar países o enfermedades, integrar datos subnacionales y analizar presupuesto/duración. Una optimización formal requeriría función objetivo, restricciones, datos y evaluación propios; no está implementada.
+
+## Fuera del alcance inicial
+
+Diagnóstico, cálculo de probabilidad personal de infección, prescripción de vacunas o medicamentos, certificación de destinos seguros, alertas oficiales propias, cobertura subnacional de todo el continente y pronósticos para fechas lejanas sin validación.
+
+El envío de notificaciones y el uso de integraciones privadas como NOTI o Netlab no forman parte del alcance acordado.
+
+## Relación con el reto
+
+La contribución temática se plantea en clima y preparación frente a riesgos sanitarios. Se evaluará el aporte del clima frente a un modelo que use solo antecedentes epidemiológicos. El agua tiene un vínculo ambiental indirecto; no se propone gestionar infraestructura hídrica. La aceptación en la categoría requiere contrastar las bases oficiales de la hackatón.
