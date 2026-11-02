@@ -1,15 +1,15 @@
-## Objetivo
-Explica el problema y el resultado de este cambio.
+## Problema y resultado
+
+Describir el cambio para alguien que no conoce la conversación.
 
 ## Issue relacionada
-Closes #
+
+Enlazar una issue real si aplica; no dejar un `Closes #` sin número.
 
 ## Validación
-Indica cómo se comprobó el cambio y adjunta evidencia cuando corresponda.
 
-## Checklist
-- [ ] Se cumplen los criterios de aceptación.
-- [ ] La documentación está actualizada.
-- [ ] No se incluyen secretos ni archivos generados.
+Indicar comprobaciones ejecutadas y sus resultados. Para datos/modelos: fuente, versión, cobertura, objetivo, horizonte y evaluación temporal según corresponda.
 
-## Limitaciones o pendientes
+## Límites
+
+Distinguir lo implementado de propuestas, ejemplos y ampliaciones. Identificar cambios en fuentes o contratos y efectos sobre la consulta por destino/fecha.
