@@ -2,7 +2,7 @@
 
 ## Estado actual
 
-El piloto ejecutable es dengue en cuatro provincias de Piura. La visión regional permanece como ampliación. Consulte [README](../README.md) y [alcance](ALCANCE.md) para los comandos y la cobertura actuales.
+La aplicación consulta dengue en cuatro provincias de Piura y malaria en los 22 archivos departamentales disponibles de Perú. La visión regional permanece como ampliación. Consulte [README](../README.md) y [alcance](ALCANCE.md) para los comandos y la cobertura actuales.
 
 | Material | Estado |
 |---|---|
@@ -28,3 +28,5 @@ El piloto ejecutable es dengue en cuatro provincias de Piura. La visión regiona
 Calendario oficial, ceros del snapshot, trazabilidad de la descarga original, datos disponibles al corte y representatividad espacial. Las correcciones de código no certifican ni modifican los CSV antiguos. No se volvieron a descargar fuentes sanitarias para esta entrega.
 
 La evaluación nueva es retrospectiva sobre datos en revisión; no equivale a un modelo operativo validado. No se han probado itinerarios con viajeros ni demostrado mejoras de decisiones o reducción de infecciones.
+
+La consulta de malaria está implementada en `app/malaria.py`; su auditoría y contrato están en [MALARIA.md](MALARIA.md). El modelo temporal de dengue no se reutiliza para malaria.

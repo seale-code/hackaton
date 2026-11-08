@@ -1,0 +1,545 @@
+{
+  "departamentos": 22,
+  "filas": 181578,
+  "filas_calendario_revision": 2744,
+  "filas_revision_con_valor": 18,
+  "suma_revision": 167,
+  "archivos": [
+    {
+      "departamento": "AMAZONAS",
+      "archivo": "malaria_2000-2025_amazonas.csv",
+      "sha256": "652ebc2d6eab3fef6b6739455e6c0b64e4535874c59f93afdaa610e6856e14ae",
+      "filas": 9646,
+      "provincias": 7,
+      "periodos": {
+        "2000–2008": {
+          "filas": 3339,
+          "suma_archivo": 5598
+        },
+        "2009–2025": {
+          "filas": 6307,
+          "suma_archivo": 10355
+        }
+      },
+      "filas_calendario_revision": 147,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 7976,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "ANCASH",
+      "archivo": "malaria_2000-2025_ancash.csv",
+      "sha256": "60c15fa69c16ec7a2720c61f5350c86d27cf1af7cfbf2125a935be6339e0bdaf",
+      "filas": 15847,
+      "provincias": 20,
+      "periodos": {
+        "2000–2008": {
+          "filas": 9540,
+          "suma_archivo": 4994
+        },
+        "2009–2025": {
+          "filas": 6307,
+          "suma_archivo": 21
+        }
+      },
+      "filas_calendario_revision": 238,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 14526,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "APURIMAC",
+      "archivo": "malaria_2000-2025_apurimac.csv",
+      "sha256": "e123fcaf9a4c03553a2ee071f94ce431fb9800d765335d66495ba6398ae6cce1",
+      "filas": 6042,
+      "provincias": 7,
+      "periodos": {
+        "2000–2008": {
+          "filas": 3339,
+          "suma_archivo": 1042
+        },
+        "2009–2025": {
+          "filas": 2703,
+          "suma_archivo": 27
+        }
+      },
+      "filas_calendario_revision": 91,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 5802,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "AREQUIPA",
+      "archivo": "malaria_2000-2025_arequipa.csv",
+      "sha256": "ef823b359e2d9bd3e35ff36aa25bdd062717e84a02c10941a77b50a1d830ca8b",
+      "filas": 4717,
+      "provincias": 8,
+      "periodos": {
+        "2000–2008": {
+          "filas": 3816,
+          "suma_archivo": 3
+        },
+        "2009–2025": {
+          "filas": 901,
+          "suma_archivo": 1
+        }
+      },
+      "filas_calendario_revision": 70,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 4714,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "AYACUCHO",
+      "archivo": "malaria_2000-2025_ayacucho.csv",
+      "sha256": "9116752740f8d51209178ea688c77ae2852c432d78284855a36344dd3c31d59a",
+      "filas": 10653,
+      "provincias": 11,
+      "periodos": {
+        "2000–2008": {
+          "filas": 5247,
+          "suma_archivo": 22486
+        },
+        "2009–2025": {
+          "filas": 5406,
+          "suma_archivo": 8985
+        }
+      },
+      "filas_calendario_revision": 161,
+      "filas_revision_con_valor": 1,
+      "suma_revision": 2,
+      "filas_con_cero": 8662,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "CAJAMARCA",
+      "archivo": "malaria_2000-2025_cajamarca.csv",
+      "sha256": "bca709e84e6b89ae28470e3e07353c14748c486f88ae33d805197b9a1e21d8ef",
+      "filas": 13409,
+      "provincias": 13,
+      "periodos": {
+        "2000–2008": {
+          "filas": 6201,
+          "suma_archivo": 6253
+        },
+        "2009–2025": {
+          "filas": 7208,
+          "suma_archivo": 314
+        }
+      },
+      "filas_calendario_revision": 203,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 11717,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "CUSCO",
+      "archivo": "malaria_2000-2025_cusco.csv",
+      "sha256": "31708a6706ea491f3dcba99227bb0c4bea3f1cf924d08823f892c9555dfb9423",
+      "filas": 10706,
+      "provincias": 13,
+      "periodos": {
+        "2000–2008": {
+          "filas": 6201,
+          "suma_archivo": 19448
+        },
+        "2009–2025": {
+          "filas": 4505,
+          "suma_archivo": 5365
+        }
+      },
+      "filas_calendario_revision": 161,
+      "filas_revision_con_valor": 1,
+      "suma_revision": 6,
+      "filas_con_cero": 9337,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "HUANCAVELICA",
+      "archivo": "malaria_2000-2025_huancavelica.csv",
+      "sha256": "71fabe4596472fbc31d5629591920d7ad778e74a3114bb87113968427261e5f2",
+      "filas": 6943,
+      "provincias": 7,
+      "periodos": {
+        "2000–2008": {
+          "filas": 3339,
+          "suma_archivo": 711
+        },
+        "2009–2025": {
+          "filas": 3604,
+          "suma_archivo": 14
+        }
+      },
+      "filas_calendario_revision": 105,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 6681,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "HUANUCO",
+      "archivo": "malaria_2000-2025_huanuco.csv",
+      "sha256": "790b61575838202858e87a3ce4191feb8fea82b393232321dbda0954f71f9c97",
+      "filas": 9752,
+      "provincias": 11,
+      "periodos": {
+        "2000–2008": {
+          "filas": 5247,
+          "suma_archivo": 618
+        },
+        "2009–2025": {
+          "filas": 4505,
+          "suma_archivo": 29
+        }
+      },
+      "filas_calendario_revision": 147,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 9387,
+      "nombres_con_caracter_danado": [
+        "MARA�ON"
+      ],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "ICA",
+      "archivo": "malaria_2000-2025_ica.csv",
+      "sha256": "f44443abe75135c0ae9d6411848737e1610d497ede3a6163e5ca0f40d326d860",
+      "filas": 3286,
+      "provincias": 5,
+      "periodos": {
+        "2000–2008": {
+          "filas": 2385,
+          "suma_archivo": 46
+        },
+        "2009–2025": {
+          "filas": 901,
+          "suma_archivo": 1
+        }
+      },
+      "filas_calendario_revision": 49,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 3263,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "JUNIN",
+      "archivo": "malaria_2000-2025_junin.csv",
+      "sha256": "7ad71a8142cb96b14e5e27ea024c46ba748a30e5b5fc6c66e5fee71b1a4b165a",
+      "filas": 9699,
+      "provincias": 9,
+      "periodos": {
+        "2000–2008": {
+          "filas": 4293,
+          "suma_archivo": 30846
+        },
+        "2009–2025": {
+          "filas": 5406,
+          "suma_archivo": 28196
+        }
+      },
+      "filas_calendario_revision": 147,
+      "filas_revision_con_valor": 1,
+      "suma_revision": 35,
+      "filas_con_cero": 7534,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "LA LIBERTAD",
+      "archivo": "malaria_2000-2025_la libertad.csv",
+      "sha256": "174ef4b550e3af9fed1cd67e80baa06f20464574d17f35deb99911e5920204eb",
+      "filas": 11130,
+      "provincias": 12,
+      "periodos": {
+        "2000–2008": {
+          "filas": 5724,
+          "suma_archivo": 9859
+        },
+        "2009–2025": {
+          "filas": 5406,
+          "suma_archivo": 1387
+        }
+      },
+      "filas_calendario_revision": 168,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 8807,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "LAMBAYEQUE",
+      "archivo": "malaria_2000-2025_lambayeque.csv",
+      "sha256": "201776865c1b7ed584d39b9bea764013a965e0a6c36bd24143eb1712aaf0747c",
+      "filas": 4134,
+      "provincias": 3,
+      "periodos": {
+        "2000–2008": {
+          "filas": 1431,
+          "suma_archivo": 4892
+        },
+        "2009–2025": {
+          "filas": 2703,
+          "suma_archivo": 483
+        }
+      },
+      "filas_calendario_revision": 63,
+      "filas_revision_con_valor": 1,
+      "suma_revision": 6,
+      "filas_con_cero": 3350,
+      "nombres_con_caracter_danado": [
+        "FERRE�AFE"
+      ],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "LIMA",
+      "archivo": "malaria_2000-2025_lima.csv",
+      "sha256": "0460e5d247bfbe4c3c134ea7cbeb87b51179f73fb76fbd8598f274a59c679b11",
+      "filas": 6572,
+      "provincias": 10,
+      "periodos": {
+        "2000–2008": {
+          "filas": 4770,
+          "suma_archivo": 78
+        },
+        "2009–2025": {
+          "filas": 1802,
+          "suma_archivo": 8
+        }
+      },
+      "filas_calendario_revision": 98,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 6500,
+      "nombres_con_caracter_danado": [
+        "CA�ETE"
+      ],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "LORETO",
+      "archivo": "malaria_2000-2025_loreto.csv",
+      "sha256": "9eb1410b0f1f24e61caada2075c31856e7831f9e55a18dfd05276156a0db752d",
+      "filas": 11024,
+      "provincias": 8,
+      "periodos": {
+        "2000–2008": {
+          "filas": 3816,
+          "suma_archivo": 351497
+        },
+        "2009–2025": {
+          "filas": 7208,
+          "suma_archivo": 550593
+        }
+      },
+      "filas_calendario_revision": 168,
+      "filas_revision_con_valor": 6,
+      "suma_revision": 79,
+      "filas_con_cero": 1661,
+      "nombres_con_caracter_danado": [
+        "DATEM DEL MARA�ON"
+      ],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "MADRE DE DIOS",
+      "archivo": "malaria_2000-2025_madre de dios.csv",
+      "sha256": "3f787adc0d1114b7267094dd21555cccbadce29db9345ba367e65216e2d752e8",
+      "filas": 4134,
+      "provincias": 3,
+      "periodos": {
+        "2000–2008": {
+          "filas": 1431,
+          "suma_archivo": 23859
+        },
+        "2009–2025": {
+          "filas": 2703,
+          "suma_archivo": 7978
+        }
+      },
+      "filas_calendario_revision": 63,
+      "filas_revision_con_valor": 2,
+      "suma_revision": 11,
+      "filas_con_cero": 2550,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "PASCO",
+      "archivo": "malaria_2000-2025_pasco.csv",
+      "sha256": "4fac096ba1d68d0ec9fa7063402122a86a4a97f50603d20265426536f2aa702e",
+      "filas": 2332,
+      "provincias": 3,
+      "periodos": {
+        "2000–2008": {
+          "filas": 1431,
+          "suma_archivo": 2501
+        },
+        "2009–2025": {
+          "filas": 901,
+          "suma_archivo": 891
+        }
+      },
+      "filas_calendario_revision": 35,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 1815,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "PIURA",
+      "archivo": "malaria_2000-2025_piura.csv",
+      "sha256": "a616cdbd96f7de4f931888e1b21c94462c69531c84e0968ff4938f4b9774eec6",
+      "filas": 11024,
+      "provincias": 8,
+      "periodos": {
+        "2000–2008": {
+          "filas": 3816,
+          "suma_archivo": 47423
+        },
+        "2009–2025": {
+          "filas": 7208,
+          "suma_archivo": 5214
+        }
+      },
+      "filas_calendario_revision": 168,
+      "filas_revision_con_valor": 2,
+      "suma_revision": 13,
+      "filas_con_cero": 8922,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "PUNO",
+      "archivo": "malaria_2000-2025_puno.csv",
+      "sha256": "e4f311c5900220d29bcefaa67d364c56defb347ab65c2e2f837b0e8c753d8b7e",
+      "filas": 7102,
+      "provincias": 13,
+      "periodos": {
+        "2000–2008": {
+          "filas": 6201,
+          "suma_archivo": 380
+        },
+        "2009–2025": {
+          "filas": 901,
+          "suma_archivo": 4
+        }
+      },
+      "filas_calendario_revision": 105,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 7053,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "SAN MARTIN",
+      "archivo": "malaria_2000-2025_san martin.csv",
+      "sha256": "dcc10094c28af50d1e431b04f4e3244624e79b177678a3d619eb3af622dc8a5b",
+      "filas": 13780,
+      "provincias": 10,
+      "periodos": {
+        "2000–2008": {
+          "filas": 4770,
+          "suma_archivo": 42516
+        },
+        "2009–2025": {
+          "filas": 9010,
+          "suma_archivo": 5307
+        }
+      },
+      "filas_calendario_revision": 210,
+      "filas_revision_con_valor": 2,
+      "suma_revision": 2,
+      "filas_con_cero": 10018,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "TUMBES",
+      "archivo": "malaria_2000-2025_tumbes.csv",
+      "sha256": "4423c9e1f1b2fec0b7ae740f68f2fa7294e93568e3a42bf24cf0d1ecbf1a2863",
+      "filas": 4134,
+      "provincias": 3,
+      "periodos": {
+        "2000–2008": {
+          "filas": 1431,
+          "suma_archivo": 15469
+        },
+        "2009–2025": {
+          "filas": 2703,
+          "suma_archivo": 4241
+        }
+      },
+      "filas_calendario_revision": 63,
+      "filas_revision_con_valor": 2,
+      "suma_revision": 13,
+      "filas_con_cero": 2838,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    },
+    {
+      "departamento": "UCAYALI",
+      "archivo": "malaria_2000-2025_ucayali.csv",
+      "sha256": "4ee622070037e56225557fd781a2a2d60c379867fea7a8b2aa9a1133c92e083b",
+      "filas": 5512,
+      "provincias": 4,
+      "periodos": {
+        "2000–2008": {
+          "filas": 1908,
+          "suma_archivo": 16450
+        },
+        "2009–2025": {
+          "filas": 3604,
+          "suma_archivo": 1243
+        }
+      },
+      "filas_calendario_revision": 84,
+      "filas_revision_con_valor": 0,
+      "suma_revision": 0,
+      "filas_con_cero": 3992,
+      "nombres_con_caracter_danado": [],
+      "procedencia": "CSV derivado del equipo; no descarga oficial verificada",
+      "calendario": "etiquetas originales; revisión según convención provisional del piloto"
+    }
+  ]
+}

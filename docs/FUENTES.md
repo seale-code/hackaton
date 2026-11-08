@@ -48,3 +48,9 @@ Elegir por intersección útil de cobertura y calidad, no solo por el total de f
 ## Vigencia de orientación
 
 Los avisos pueden cambiar. La guía deberá mostrar fuente y fecha de consulta, diferenciar un corte histórico de la situación actual y evitar recomendaciones clínicas inventadas. No reutilizar cifras de conversaciones anteriores como datos vigentes.
+
+## Malaria en Perú
+
+CDC Perú / Ministerio de Salud. *Vigilancia epidemiológica de Malaria*. Plataforma Nacional de Datos Abiertos. [Catálogo oficial](https://www.datosabiertos.gob.pe/dataset/vigilancia-epidemiol%C3%B3gica-de-malaria). Recursos identificados: `datos_abiertos_vigilancia_malaria_2000_2008.csv` y `datos_abiertos_vigilancia_malaria_2009_2025.csv`. Catálogo consultado el 8 de noviembre de 2026.
+
+La aplicación consulta los CSV derivados del equipo; la solicitud directa del recurso oficial quedó bloqueada. [Procedencia, definiciones y contrato](MALARIA.md).

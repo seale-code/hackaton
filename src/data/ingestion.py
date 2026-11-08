@@ -66,10 +66,11 @@ def aggregate_malaria(frame: pd.DataFrame, aggregated: bool):
         result["tipo_registro"] = "conteos_agregados_falciparum_vivax"
     else:
         # No asumir que todas las filas son confirmadas ni unirlas al total agregado.
-        if "tipo_dx" not in valid:
-            valid["tipo_dx"] = "NO_INFORMADO"
-        valid["tipo_dx"] = valid.tipo_dx.fillna("NO_INFORMADO").replace("", "NO_INFORMADO")
-        result = valid.groupby(groups + ["tipo_dx"]).size().reset_index(name="registros")
+        for field in ["diagnostic", "tipo_dx"]:
+            if field not in valid:
+                valid[field] = "NO_INFORMADO"
+            valid[field] = valid[field].astype("string").str.strip().fillna("NO_INFORMADO").replace("", "NO_INFORMADO")
+        result = valid.groupby(groups + ["diagnostic", "tipo_dx"]).size().reset_index(name="registros")
         result["tipo_registro"] = "notificaciones_individuales"
     return result, rejected
 

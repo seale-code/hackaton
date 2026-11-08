@@ -28,7 +28,7 @@ El snapshot original conserva rellenos previos: 2.835 filas con cero confirmados
 
 - Dengue/zoonosis: `departamento, provincia, ano, semana, inicio_semana, diagnostic, tipo_dx, registros`. Una fila cuenta notificaciones presentes de un tipo; las semanas y diagnósticos sin registros no se inventan con cero. Diagnósticos fuera de selección y campos inválidos van al reporte de revisión. Dengue selecciona Piura.
 - Malaria 2000–2008: columnas falciparum/vivax separadas, sumadas por provincia y semana; conteos inválidos van a revisión.
-- Malaria 2009–2025: número de notificaciones por tipo de diagnóstico; si la fuente no tiene tipo se marca `NO_INFORMADO`. Los dos periodos se exportan separados porque su equivalencia requiere revisar diccionarios y definiciones.
+- Malaria 2009–2025: número de notificaciones por código de diagnóstico y tipo de diagnóstico; si la fuente no tiene tipo se marca `NO_INFORMADO`. Los dos periodos se exportan separados porque su equivalencia requiere revisar diccionarios y definiciones.
 - Clima: media semanal de temperatura/humedad y suma de lluvia solo con siete días y tres variables completas. Una semana parcial conserva metadatos de cobertura y valores vacíos. Días duplicados o valores físicamente inválidos disparan un error.
 
 La selección exacta de códigos de zoonosis se conserva del aporte del equipo (A27, X20, X21); no se presenta ese conjunto como una sola enfermedad. Las fuentes completas permanecen en cada ejecución para poder revisar la selección.
@@ -36,3 +36,7 @@ La selección exacta de códigos de zoonosis se conserva del aporte del equipo (
 ## Trazabilidad y compatibilidad
 
 `python -m src.data.cli ...` crea un directorio nuevo con entradas originales, resultados, revisión y `manifest.json` (origen, consulta, SHA-256, lectura UTC, filas). No sobrescribe CSV históricos. Los notebooks antiguos esperan otro esquema; deben migrarse explícitamente antes de consumir las salidas v2. Los manifiestos de nuevas descargas no reparan retroactivamente la procedencia incompleta del snapshot de la demo.
+
+## Consulta histórica de malaria
+
+La interfaz también utiliza los 22 CSV departamentales del equipo, preservando las etiquetas de semana originales y separando los periodos de origen. Su contrato, auditoría y procedencia se detallan en [MALARIA.md](MALARIA.md). Estos archivos no se mezclan con el snapshot de dengue ni con las salidas v2.

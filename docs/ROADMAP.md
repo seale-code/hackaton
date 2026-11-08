@@ -7,6 +7,8 @@
 - Adaptadores con calendario compartido provisional, revisión de incompatibles y trazabilidad.
 - Evaluación retrospectiva a 1 y 2 semanas con referencias y comparación con/sin clima.
 
+- Consulta histórica de malaria por departamento, provincia, periodo y año, con exportación y auditoría de 22 archivos.
+
 ## Próximo bloqueo: calidad de la fuente
 
 1. Obtener y guardar las fuentes originales, fecha de extracción, hash y diccionarios.
