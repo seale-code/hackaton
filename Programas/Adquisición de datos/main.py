@@ -1,0 +1,5 @@
+import procesamiento_malaria
+import procesamiento_zoonosis
+
+procesamiento_malaria
+procesamiento_zoonosis
