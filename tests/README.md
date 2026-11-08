@@ -1,13 +1,11 @@
-# Comprobaciones previstas
+# Comprobaciones ejecutables
 
-Todavía no existe una suite automatizada de la guía ni comandos de pruebas configurados. No se añaden pruebas artificiales para describir funciones que aún no están implementadas.
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+python scripts/audit_pilot.py
+```
 
-Cuando exista código, cubrir los comportamientos relevantes:
+Pruebas: límites de calendario; semanas inválidas conservadas; ausencia de ceros fabricados; separación de diagnósticos; clima parcial/duplicado; snapshot inválido; consulta por solapamiento; cortes de entrenamiento y objetivos; variables sin información futura; misma muestra para modelos; arranque y cambios de provincia/fechas en Streamlit mediante AppTest. No necesitan red ni descargas oficiales.
 
-- Conversión de calendarios y cambios de año.
-- Duplicados, faltantes, revisiones y separación entre definiciones de casos.
-- Variables disponibles al corte y ausencia de información futura.
-- Validación de paradas, escala territorial y cruce de fechas con el horizonte.
-- Estados de cobertura insuficiente/desactualizada y separación de avisos oficiales.
-
-Los experimentos de ML deben cumplir el [plan de evaluación](../docs/EVALUACION.md); una prueba unitaria no sustituye la validación temporal.
+GitHub Actions ejecuta la suite con Python 3.12. Se comprobó el arranque y las interacciones con AppTest. La revisión visual en navegador quedó pendiente: el navegador de esta sesión no pudo acceder al servidor local. No se han realizado pruebas con viajeros.

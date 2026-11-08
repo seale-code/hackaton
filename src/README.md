@@ -1,12 +1,6 @@
-# Código previsto de la guía
+# Módulos implementados
 
-| Directorio | Responsabilidad propuesta |
-| --- | --- |
-| `data/` | Ingesta y validación regional |
-| `features/` | Variables históricas y climáticas disponibles al corte |
-| `models/` | Baselines, evaluación e inferencia |
-| `itineraries/` | Validación de paradas y cruce con la cobertura |
-| `guidance/` | Catálogo revisado de orientación oficial |
-| `prioritization/` | Comparación opcional de alternativas |
+- `data/`: calendario provisional, transformaciones puras, consulta y validación del snapshot, CLI de ingesta explícita.
+- `models/evaluate.py`: experimento retrospectivo reproducible con cortes por fecha.
 
-Los README describen módulos por implementar. Los CSV de `data/casos_dengue_piura/` son antecedentes existentes, no un adaptador regional. Ver [arquitectura](../docs/ARQUITECTURA.md).
+`features/`, `guidance/`, `itineraries/` y `prioritization/` conservan propuestas para etapas posteriores; no son funcionalidades implementadas.

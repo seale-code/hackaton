@@ -1,5 +1,5 @@
-# Ingesta y calidad
+# Datos del piloto
 
-Implementación regional pendiente. La unidad propuesta es territorio/enfermedad/semana, con definición de casos, estado de notificación y fecha de disponibilidad. Ver [contrato](../../docs/DATOS.md).
+`calendar.py`: convención semanal provisional compartida. `ingestion.py`: transformaciones sin imputar ceros. `cli.py`: archivos locales o descarga explícita, salidas versionadas y manifiestos. `pilot.py`: validación y consulta del snapshot conservado.
 
-`casos_dengue_piura/` conserva ocho CSV del piloto anterior. No renombrarlos como series de otros países ni distribuir sus totales entre ciudades. Su revisión está en [antecedentes](../../docs/ANTECEDENTES.md).
+Los CSV de `casos_dengue_piura/` son salidas históricas previas, sin regenerar. [Contrato actual](../../docs/DATOS.md).

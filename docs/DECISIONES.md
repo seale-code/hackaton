@@ -1,3 +1,11 @@
+# Decisión de implementación · 08/11/2026
+
+Se implementa el piloto de dengue en Piura, Sullana, Morropón y Paita descrito en la ficha técnica. Sustituye para la primera entrega las propuestas anteriores de dos o tres países y horizonte de 2–4 semanas. La visión regional se conserva como ampliación. El experimento actual usa 1–2 semanas y permanece separado de la interfaz por sus límites de calidad y disponibilidad temporal. Malaria y zoonosis siguen siendo exploración.
+
+Las decisiones anteriores se conservan abajo como historial, no como alcance implementado.
+
+---
+
 # Registro de decisiones
 
 Este registro distingue la dirección expresada en la conversación de las recomendaciones técnicas que aún necesitan validación del equipo.

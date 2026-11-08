@@ -1,5 +1,7 @@
-# Scripts de obtención y transformación
+# Scripts
 
-`test/` conserva scripts y salidas de exploración del piloto de Piura. El nombre de esa carpeta no implica una batería de pruebas automáticas. No ejecutar sus descargas como si fueran la integración regional de la guía.
+`python scripts/audit_pilot.py` audita el snapshot local sin red.
 
-Los futuros scripts deberán respetar [fuentes](../docs/FUENTES.md), [contratos](../docs/DATOS.md), límites de las APIs y versiones de snapshots. El script `test/obtener_indices_enso.py` está vacío en la base revisada; la exploración ENSO está en un notebook.
+Las entradas antiguas en `scripts/test/` delegan a `src.data.cli`; requieren `--input` o `--download`. Sus CSV existentes se conservan. El script ENSO vacío es un antecedente pendiente, no un módulo de producción.
+
+Ver [README](../README.md) para ejemplos y [datos](../docs/DATOS.md) para el nuevo esquema.

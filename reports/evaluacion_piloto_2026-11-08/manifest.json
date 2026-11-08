@@ -1,0 +1,46 @@
+{
+  "created_at_utc": "2026-11-08T13:20:35.000745+00:00",
+  "dataset": "data/processed/dengueshield_dataset_integrado_REVISION.csv",
+  "dataset_sha256": "6bf93f88c3e29593c59f27f7bdc9bc9319422dfd3c097498e4785be4366f2733",
+  "evaluation_code_sha256": "177268740a37054f61ac158c934bbfb377478719a301bb42427a164ec229d051",
+  "software": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.18.1"
+  },
+  "objetivo": "conteo semanal confirmado de dengue",
+  "horizontes_semanas": [
+    1,
+    2
+  ],
+  "train": "2001–2021",
+  "validation": "2022–2023",
+  "test": "2024",
+  "features": {
+    "historia": [
+      "casos_origen",
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "semana_sin",
+      "semana_cos"
+    ],
+    "clima": [
+      "tmax_promedio",
+      "tmin_promedio",
+      "lluvia_total"
+    ]
+  },
+  "alpha_ridge": 1.0,
+  "negative_predictions": "recortadas a cero",
+  "model_selection": "ninguna",
+  "limitations": [
+    "Snapshot en revisión; ceros previos no auditados con la fuente",
+    "Excluye años marcados sin casos; no certifica el resto de ceros",
+    "Calendario provisional y un caso de Sullana separado para revisión",
+    "No se reconstruyeron retrasos de publicación; variables asumidas conocidas al cierre de semana",
+    "Clima compartido Piura/Sullana pendiente de representatividad",
+    "No demuestra riesgo individual, utilidad con viajeros ni desempeño en tiempo real"
+  ]
+}
