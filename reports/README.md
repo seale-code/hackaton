@@ -1,7 +1,5 @@
-# Reportes de calidad y evaluación
+# Reportes
 
-Los archivos `dengueshield_reporte_calidad.csv` y `dengueshield_casos_pendientes_revision.csv` pertenecen al piloto de Piura. Se conservan como evidencia previa y no son resultados regionales de la guía.
+Los archivos `dengueshield_*` son reportes históricos del equipo, conservados sin modificación. `evaluacion_piloto_2026-11-08/` contiene la nueva evaluación retrospectiva ejecutada: predicciones, métricas, manifiesto y lectura de resultados.
 
-Los reportes futuros incluirán cobertura por país/enfermedad, faltantes, definiciones, periodos, particiones temporales, baseline, predicciones de prueba y métricas por grupo. Las pruebas con viajeros tendrán resultados separados de la evaluación predictiva.
-
-Ver [antecedentes](../docs/ANTECEDENTES.md) y [evaluación](../docs/EVALUACION.md).
+Los futuros experimentos deben escribirse en un directorio nuevo para conservar evidencia. Las métricas actuales usan datos en revisión; no acreditan una predicción operativa ni beneficio con viajeros.

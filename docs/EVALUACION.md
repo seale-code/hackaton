@@ -1,67 +1,30 @@
-# Evaluación del modelo y de la guía
+# Experimento retrospectivo del piloto
 
-## Elegir una tarea antes de entrenar
+## Tarea y ejecución
 
-Seleccionar enfermedad, territorios, definición de casos, cobertura y un horizonte inicial. Dos alternativas de experimento, todavía por decidir:
+Objetivo: conteo semanal **confirmado** de dengue, a 1 y 2 semanas, por separado para Piura, Sullana, Morropón y Paita. Ejecutar desde la raíz:
 
-- **Conteo:** estimar casos notificados en una semana futura definida.
-- **Incremento:** clasificar un aumento respecto a una referencia histórica especificada previamente.
+```bash
+python -m src.models.evaluate --output reports/nueva_evaluacion
+```
 
-Un umbral debe quedar fijado con entrenamiento y conocimiento del dominio antes de revisar prueba. No llamar «brote» a cualquier aumento sin una definición y sustento adecuados.
+El directorio debe ser nuevo. Se guardan predicciones individuales, métricas por provincia/horizonte/partición/modelo y manifiesto del dataset y parámetros. [Ejecución disponible](../reports/evaluacion_piloto_2026-11-08/README.md).
 
-## Viabilidad del dataset
+## Método implementado
 
-1. Auditar por país, enfermedad y semana las fechas, faltantes, revisiones y periodos comparables.
-2. Mantener separados sospechosos, probables, confirmados y otras definiciones hasta justificar su combinación.
-3. Identificar si las series son incidentes semanales o acumulados. Sus diferencias requieren revisar reinicios y correcciones.
-4. Distinguir semanas sin notificación de ceros observados.
-5. Registrar cuándo estuvo disponible cada variable. Si no existe historial de publicaciones, declarar la evaluación como retrospectiva con series revisadas.
+- Datos: snapshot original en revisión; se excluyen ejemplos con faltantes o años marcados sin casos registrados.
+- Cada provincia se reindexa por fechas semanales, conservando huecos como faltantes. Una ausencia no se convierte en la semana siguiente ni en cero.
+- Origen al cierre de la semana; objetivo h semanas después. Entrenamiento 2001–2021, validación 2022–2023 y prueba 2024. Las semanas completas de origen y objetivo deben estar dentro de su bloque (incluido el sábado final) para evitar que etiquetas de entrenamiento invadan validación.
+- Variables de historia: conteo en origen, rezagos de 1, 2 y 3 semanas, seno y coseno de la fase anual. La alternativa climática añade temperaturas máxima/mínima y lluvia de la semana de origen.
+- Referencias: persistencia (último conteo) y estacional de 52 semanas antes del objetivo. La referencia de 52 semanas es una aproximación, no una alineación exacta de semana epidemiológica entre años.
+- Candidatos: StandardScaler ajustado solo en entrenamiento + Ridge(alpha=1.0), con y sin clima. Parámetro fijado de antemano, sin búsqueda ni reajuste sobre prueba. Predicciones negativas recortadas a cero.
+- Todos los métodos se comparan sobre las mismas fechas completas; la necesidad de historia estacional limita también la muestra de los otros métodos.
+- Métrica: MAE (casos por semana), número de predicciones y tamaño de entrenamiento. No se usan porcentajes de precisión ni probabilidad individual.
 
-Más filas de otros países no garantizan más ejemplos comparables. Las áreas con distinta vigilancia y definición se evalúan de forma separada antes de considerar un modelo conjunto.
+## Lo que este experimento no comprueba
 
-## Validación temporal
+No se reconstruyeron retrasos de notificación/publicación de casos ni disponibilidad histórica del clima. Se asumen disponibles al cierre de semana: es una evaluación retrospectiva con series revisadas, no una simulación operativa fiel. El conjunto incluye ceros antiguos sin justificar y un calendario provisional; ninguna métrica resuelve esas limitaciones.
 
-- Entrenar con el pasado y reservar periodos posteriores para validación y prueba.
-- Usar fechas de corte comunes a todos los territorios de cada partición; no repartir filas al azar.
-- Evitar que las ventanas futuras de las etiquetas de entrenamiento invadan el periodo reservado. Considerar también el retraso de publicación de esas etiquetas.
-- Ajustar imputación, escalado, selección y umbrales solo con entrenamiento.
-- Hacer evaluación con orígenes móviles si la longitud de las series lo permite.
-- Si se afirma transferencia a un país no visto, reservarlo también geográficamente y medir ese resultado por separado.
-- Documentar qué hacer ante un país o una enfermedad sin cobertura suficiente.
+2025 no se usa como prueba en esta primera ejecución. Para iterar tras observar 2024 será necesario otro periodo reservado; ya no puede tratarse como una prueba nueva no vista. El notebook anterior de partición aleatoria queda como antecedente, sin reutilizar sus métricas.
 
-## Referencias y aporte del clima
-
-Comparar, según disponibilidad, persistencia del último valor y una referencia estacional. La referencia estacional exige historia comparable suficiente.
-
-Evaluar la misma tarea, cortes y muestra en tres versiones:
-
-1. Antecedentes epidemiológicos y calendario.
-2. Los anteriores más variables meteorológicas.
-3. Los anteriores más índices climáticos relacionados con El Niño, si son pertinentes.
-
-Medir el cambio de error y su variación entre países y periodos. Si el clima no mejora el resultado, documentarlo; no atribuirle una mejora por la importancia de variables. No se infiere causalidad de esta comparación.
-
-Los valores meteorológicos futuros observados no se usarán como si hubieran sido conocidos al emitir el pronóstico. Una evaluación con pronósticos meteorológicos necesita sus versiones disponibles en cada fecha de corte.
-
-## Métricas
-
-| Tarea | Evidencia propuesta |
-| --- | --- |
-| Conteo | MAE y error por país, enfermedad y horizonte frente al baseline; documentar el tratamiento de conteos negativos si el algoritmo puede producirlos |
-| Clasificación de incremento | Precisión, recall, matriz de confusión y PR-AUC cuando las clases lo permitan |
-| Intervalos | Cobertura y amplitud empíricas en periodos reservados; no mostrar intervalos sin un método evaluado |
-| Probabilidad del evento epidemiológico | Calibración antes de mostrarla; no equivale a probabilidad personal del viajero |
-
-Reportar cantidad de observaciones y eventos por grupo. Un promedio agregado no debe ocultar países con pocos datos o bajo desempeño. No hay métricas regionales validadas en el repositorio.
-
-## Pruebas del producto
-
-Comprobar: cruce de itinerario/semana, salida fuera del horizonte, escala nacional frente a ciudad, datos desactualizados, faltantes, avisos oficiales separados y varias paradas.
-
-Con viajeros, medir realización de tareas, comprensión de las fuentes y distinción entre situación observada y estimación. El éxito de consulta o una buena métrica predictiva no demuestran reducción de infecciones.
-
-## Evidencia del experimento
-
-Guardar dataset y versión, periodos, objetivo, horizonte, variables disponibles al corte, baseline, parámetros, semilla, métricas por grupo, predicciones de prueba y limitaciones. Ver [models/README.md](../models/README.md) y [reports/README.md](../reports/README.md).
-
-El notebook de regresión del piloto de Piura es exploratorio y usa una partición aleatoria; sus resultados no sustituyen esta evaluación temporal. Ver [Antecedentes](ANTECEDENTES.md).
+No hay intervalos, avisos sanitarios automáticos ni predicciones en la interfaz. La utilidad con viajeros y la contribución climática deben evaluarse separadamente; una mejora en una provincia no se generaliza al resto.

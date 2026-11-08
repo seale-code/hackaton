@@ -1,7 +1,9 @@
-# Aplicación: guía del viajero
+# Aplicación
 
-Directorio previsto para la interfaz. Todavía no hay aplicación ejecutable ni comando de arranque.
+La entrada ejecutable está en la raíz: `streamlit_app.py`.
 
-Se propone Streamlit con Plotly. El recorrido incluye itinerario, fichas por destino, situación epidemiológica, estimaciones dentro de cobertura y orientación oficial. Ver [producto](../docs/PRODUCTO.md) y [demo](../docs/DEMO.md).
+```bash
+python -m streamlit run streamlit_app.py
+```
 
-La consulta debe mostrar escala, fecha de corte, fuentes y estados de información insuficiente, desactualizada o fuera del horizonte. No entrenar modelos en cada interacción ni usar los CSV de Piura como si cubrieran Sudamérica.
+Consulta histórica por provincia y fechas, casos/clima, fuentes, cobertura y exportación CSV. El piloto cubre cuatro provincias de Piura; no emite pronósticos actuales. Ver [guion](../docs/DEMO.md).

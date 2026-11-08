@@ -1,7 +1,3 @@
-# Artefactos de modelos
+# Modelos
 
-No hay un modelo regional validado para la guía del viajero. Los artefactos locales se excluyen de Git por defecto.
-
-Cada modelo futuro necesita ficha con enfermedad, áreas y escala, objetivo, horizonte, variables disponibles al corte, dataset, particiones, baseline, métricas por grupo, versión, fecha y límites. Acompañar intervalos o probabilidades con su evaluación correspondiente.
-
-Ver [evaluación](../docs/EVALUACION.md). Una métrica exploratoria de Piura no se presenta como desempeño sudamericano.
+El experimento ejecutable está en `src/models/evaluate.py`; sus métricas y predicciones están en `reports/evaluacion_piloto_2026-11-08/`. Los modelos se ajustan en memoria para evaluación y no se publican como artefactos operativos. No hay un modelo regional validado ni un pronóstico integrado en la aplicación.

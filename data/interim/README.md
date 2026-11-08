@@ -1,5 +1,3 @@
-# Transformaciones intermedias
+# Ejecuciones de ingesta
 
-Tablas normalizadas por territorio, enfermedad y periodo, conservando claves y procedencia. Auditar calendarios, revisiones, duplicados y faltantes antes de integrar fuentes. El contenido local se excluye de Git por defecto.
-
-Ver [contrato](../../docs/DATOS.md).
+`python -m src.data.cli ...` guarda cada ejecución en un subdirectorio nuevo: fuentes, SHA-256, resultados y revisión. Los archivos generados se ignoran en Git por defecto. No sobrescribir datos previos ni subir fuentes completas sin revisar sus condiciones y contenido.

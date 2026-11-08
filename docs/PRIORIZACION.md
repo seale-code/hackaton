@@ -1,3 +1,5 @@
+> **Estado del piloto (08/11/2026):** el alcance implementado está en [ALCANCE.md](ALCANCE.md). Las propuestas regionales de este documento son ampliaciones futuras, no cobertura disponible. La implementación y las fuentes consumidas se detallan en [README](../README.md) y [DATOS.md](DATOS.md).
+
 # Comparación de destinos e itinerarios
 
 Este documento reemplaza la priorización territorial de recursos sanitarios del enfoque anterior. Se conserva su ruta para mantener los enlaces del repositorio.
