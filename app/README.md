@@ -1,9 +1,5 @@
 # Aplicación
 
-La entrada ejecutable está en la raíz: `streamlit_app.py`.
+Entrada: `python -m streamlit run streamlit_app.py`.
 
-```bash
-python -m streamlit run streamlit_app.py
-```
-
-Consulta histórica por provincia y fechas, casos/clima, fuentes, cobertura y exportación CSV. El piloto cubre cuatro provincias de Piura; no emite pronósticos actuales. Ver [guion](../docs/DEMO.md).
+El selector sanitario muestra las pantallas `app/dengue.py` y `app/malaria.py`. Dengue ofrece provincia y fechas con clima de Piura. Malaria ofrece departamento, periodo de origen, provincia y año, con gráfico semanal y exportación. La consulta conserva la definición y cobertura de cada fuente. [Demo](../docs/DEMO.md) · [Malaria](../docs/MALARIA.md).

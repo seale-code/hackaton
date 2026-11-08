@@ -10,3 +10,11 @@
 - Sin pruebas con viajeros, alertas oficiales en vivo ni pronóstico operativo.
 
 Los resultados de GitHub Actions deben consultarse en el pull request; no se confunden con las comprobaciones locales.
+
+## Ampliación de malaria
+
+- Suite completa: 45 pruebas aprobadas (incluye los 29 casos anteriores).
+- Catálogo de malaria: 22 archivos, 181.578 filas. Los CSV originales no se modificaron.
+- Auditoría reproducible de hashes y valores en `reports/malaria/`. Se conservan 2.744 filas con bandera de revisión, incluidas 18 con valores positivos (suma 167).
+- Interfaz comprobada con AppTest: cambio de enfermedad, departamento, periodo, año y regreso a dengue. La revisión visual en navegador sigue siendo una comprobación independiente.
+- La solicitud de descarga oficial devolvió HTTP 418; no se afirma una nueva validación de la fuente. Se usan los archivos históricos del equipo.
