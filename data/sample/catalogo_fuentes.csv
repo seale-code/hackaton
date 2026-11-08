@@ -1,0 +1,6 @@
+source_id,label,url,kind,access_status,license_status
+ops_arbo,OPS ARBO Portal,https://www.paho.org/es/arbo-portal,epidemiology,regional_download_pending,pending
+ops_open_data,OPS Datos Abiertos,https://opendata.paho.org/es,epidemiology,resource_selection_pending,pending
+nasa_power,NASA POWER Daily API,https://power.larc.nasa.gov/docs/services/api/temporal/daily/,climate,prior_piura_exploration_regional_adaptation_pending,pending
+noaa_psl,NOAA PSL Monthly Climate Indices,https://psl.noaa.gov/data/timeseries/month/,climate_index,prior_exploration_availability_review_pending,pending
+cdc_travel,CDC Travel Health Notices,https://wwwnc.cdc.gov/travel/notices,guidance,integration_and_review_pending,pending

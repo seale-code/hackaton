@@ -1,0 +1,1 @@
+country_iso3,area_id,spatial_level,disease,case_definition,cutoff_date,target_week_start,horizon_weeks,target_name,prediction_value,prediction_lower,prediction_upper,model_version,dataset_version,evaluation_id,generated_at,status,unavailable_reason

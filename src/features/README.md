@@ -1,3 +1,5 @@
-# Variables
+# Variables para las tendencias
 
-Implementar rezagos y acumulados históricos con fecha de corte explícita. Definir el objetivo futuro después de cerrar evento y horizonte. Evitar que variables o imputaciones usen información futura.
+Implementación pendiente. Se proponen antecedentes de casos, estacionalidad y variables climáticas e índices de El Niño pertinentes para cada territorio.
+
+Calcular rezagos y agregados sin información futura, justificar la representación espacial y documentar fechas de publicación. Una serie mensual alineada a semanas no crea nuevas observaciones independientes. Ver [evaluación](../../docs/EVALUACION.md).

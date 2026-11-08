@@ -1,25 +1,33 @@
-# Priorización y proceso de decisión
+# Comparación de destinos e itinerarios
 
-## Propósito
+Este documento reemplaza la priorización territorial de recursos sanitarios del enfoque anterior. Se conserva su ruta para mantener los enlaces del repositorio.
 
-Transformar estimaciones de riesgo en un ranking transparente para explorar dónde concentrar la atención. El puntaje de prioridad es distinto de la probabilidad predictiva.
+## Decisión del viajero
 
-## Diseño pendiente
+Relacionar las fechas de cada parada con información epidemiológica y orientación oficial. La comparación de itinerarios es una posible ampliación; el núcleo del MVP es consultar el recorrido y reconocer sus límites.
 
-Evaluar riesgo, población expuesta, incidencia, vulnerabilidad y recursos/costos, solo cuando existan datos adecuados. Definir normalización, dirección de cada criterio, pesos, tratamiento de faltantes y desempates. Los pesos ilustrativos de los chats no son parámetros aprobados.
+## Criterios propuestos
 
-Ingeniería Industrial define y justifica los criterios y el flujo operativo; Informática implementa y comprueba los cálculos. Probar cómo cambia el ranking al modificar los pesos.
+- Cobertura, escala territorial y antigüedad de las fuentes.
+- Situación notificada y tendencia respecto al historial de la propia zona.
+- Existencia y vigencia de avisos oficiales aplicables.
+- Cobertura temporal de una estimación evaluada.
+- Restricciones de presupuesto y duración, solo si el usuario las aporta y se implementa esa ampliación.
 
-## Flujo previsto
+No ordenar países por número bruto de casos: población, vigilancia y definiciones pueden ser diferentes. Tampoco considerar un país sin notificaciones como la alternativa más segura.
 
-Datos → estimación → revisión de calidad → priorización → revisión humana → propuesta de acción → seguimiento.
+## Comparación transparente
 
-Documentar quién recibe la información, quién decide, qué restricciones existen y qué indicadores se pueden medir. En el MVP no se envían alertas oficiales ni se asignan recursos reales.
+Presentar las alternativas en una tabla, manteniendo enfermedad, corte y escalas compatibles. Mostrar los criterios por separado. No definir un índice compuesto con pesos inventados ni sumar niveles de avisos oficiales de distintas enfermedades.
 
-## Criterios de aceptación
+Si se incorpora un puntaje experimental, sus componentes, normalización, faltantes y sensibilidad deben quedar documentados y validados. Dicho puntaje no certifica seguridad sanitaria.
 
-- Varias zonas de Piura con datos comparables.
-- Puntajes reproducibles y componentes visibles.
-- Sin pesos o costos presentados como validados si son supuestos.
-- Si faltan datos, mostrar la limitación o desactivar el ranking.
-- Una clasificación ponderada se describe como ranking; solo hablar de optimización si se implementan objetivo y restricciones explícitas.
+## Qué se necesitaría para optimizar
+
+Una optimización formal requiere objetivo, variables de decisión y restricciones explícitas. Ejemplo de ampliación: comparar recorridos que cumplen fechas, presupuesto y destinos requeridos, mostrando junto a cada opción la información sanitaria disponible. Los costos, tiempos y reglas tendrían que obtenerse y verificarse; no existen todavía en el repositorio.
+
+No se recomienda cancelar, cambiar o autorizar un viaje basándose únicamente en el modelo. Las indicaciones de una autoridad se atribuyen a esa autoridad y no se reemplazan por el puntaje del prototipo.
+
+## Aporte de Ingeniería Industrial
+
+Diseñar el proceso de planificación, elegir criterios comprensibles, analizar restricciones y evaluar utilidad con viajeros. La evaluación incluye si la persona puede interpretar diferencias sin confundir datos insuficientes con riesgo bajo.
