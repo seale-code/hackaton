@@ -1,96 +1,102 @@
+<div align="center">
+
 # Guía climática y sanitaria para viajeros
 
-**Primera demo: dengue en Piura, Sullana, Morropón y Paita (Perú).**
+### Datos epidemiológicos y clima para conocer mejor tu destino
 
-Consulta antecedentes de dengue y clima por provincia y periodo. La visión es una guía de viajes para Sudamérica; la cobertura implementada se limita a este piloto. El nombre definitivo del producto está pendiente.
+**Información territorial · Visualización de datos · Análisis temporal**
 
-## Ejecutar la demo
+Proyecto de la Hackatón FACI  
+Ingeniería Informática + Ingeniería Industrial
 
-Requiere **Python 3.12**. Desde la raíz del repositorio:
+</div>
+
+---
+
+## El proyecto
+
+Preparar un viaje también implica conocer el contexto sanitario y ambiental del destino. Este proyecto reúne información epidemiológica y climática en una experiencia de consulta por lugar y periodo, con gráficos y fuentes que facilitan explorar los datos.
+
+La propuesta tiene una visión sudamericana y se desarrolla a partir de un piloto de **dengue en cuatro provincias de Piura, Perú: Piura, Sullana, Morropón y Paita**.
+
+> **Nuestra pregunta:** ¿cómo acercar la información sanitaria y climática de un destino a las personas que preparan un viaje?
+
+## Nuestra propuesta
+
+Conectar datos, territorio y tiempo para hacer más accesible la consulta de antecedentes. La aplicación permite explorar cómo varían los casos registrados y las condiciones climáticas a lo largo de las semanas, manteniendo visible la procedencia de la información.
+
+El proyecto combina dos perspectivas: el desarrollo de herramientas de análisis y visualización, y el estudio de cómo esas herramientas pueden apoyar la planificación de un recorrido.
+
+## Explora la aplicación
+
+| Funcionalidad | Experiencia de consulta |
+| --- | --- |
+| Selección de destino | Explora Piura, Sullana, Morropón o Paita |
+| Consulta por fechas | Elige el periodo histórico que deseas conocer |
+| Evolución del dengue | Visualiza casos confirmados y probables por semana |
+| Contexto climático | Consulta temperaturas y precipitación histórica |
+| Datos descargables | Exporta la selección en formato CSV |
+| Fuentes y cobertura | Identifica la procedencia y el periodo de los datos |
+
+**El recorrido es sencillo:** selecciona una provincia, elige las fechas y explora los gráficos de casos y clima.
+
+## El piloto en Piura
+
+La aplicación trabaja con **5.376 registros semanales**, correspondientes a series etiquetadas entre **2000 y 2025**, y reúne antecedentes de dengue y variables meteorológicas para las cuatro provincias del piloto.
+
+| Componente | Fuente de referencia |
+| --- | --- |
+| Vigilancia epidemiológica de dengue | CDC Perú / Ministerio de Salud |
+| Variables meteorológicas del piloto | NASA POWER |
+| Información de consulta sobre dengue | Organización Panamericana de la Salud |
+
+El análisis de datos se complementa con un **experimento retrospectivo de predicción de conteos semanales a una y dos semanas**, que compara referencias estadísticas y regresión con y sin variables climáticas. Su metodología y resultados se presentan en la documentación técnica.
+
+## Tecnología
+
+**Python · pandas · NumPy · scikit-learn · Streamlit · Plotly**
+
+Python sostiene el procesamiento y análisis; Streamlit y Plotly permiten explorar los resultados mediante una interfaz interactiva. Las pruebas automatizadas se ejecutan con pytest y GitHub Actions.
+
+## Ejecutar la aplicación
+
+Requiere **Python 3.12**. Desde la carpeta del repositorio:
 
 ```bash
 python -m venv .venv
-# Linux / macOS:
+```
+
+Activa el entorno según tu sistema:
+
+```bash
+# Linux / macOS
 source .venv/bin/activate
-# Windows PowerShell: .venv\Scripts\Activate.ps1
+
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+```
+
+Instala las dependencias e inicia la aplicación:
+
+```bash
 python -m pip install -r requirements.txt
 python -m streamlit run streamlit_app.py
 ```
 
-Abrir la dirección local que imprime Streamlit (normalmente `http://localhost:8501`). La demo utiliza el CSV incluido; no descarga datos ni entrena modelos al abrirse. Las dependencias directas están fijadas en `requirements.txt`.
+Abre la dirección que muestra Streamlit, normalmente `http://localhost:8501`. La consulta utiliza el conjunto de datos incluido en el repositorio.
 
-## Qué funciona
+## Un proyecto interdisciplinario
 
-- Selección de provincia y fechas; incluye las semanas completas que se solapan con la consulta.
-- Casos confirmados y probables separados, gráficos semanales de casos, temperaturas y lluvia.
-- Descarga de la consulta en CSV, cobertura visible y mensajes para periodos sin datos o parcialmente cubiertos.
-- Enlaces de consulta a MINSA, OPS y NASA POWER; no se presentan como avisos vigentes integrados.
-- Comprobaciones de claves, calendario, conteos, fechas y valores faltantes del snapshot.
-- Procesamiento revisado de dengue, malaria, zoonosis y clima: sin descargas al importar, sin generar 53 semanas para todos los años ni rellenar ausencias con ceros. Diagnósticos separados, registros dudosos conservados y manifiestos de procedencia.
-- Experimento retrospectivo con persistencia, referencia estacional y regresión Ridge con/sin clima, evaluado por provincia y horizonte.
+**Ingeniería Informática** aporta el procesamiento de datos, el análisis temporal y el desarrollo de la aplicación. **Ingeniería Industrial** aporta la perspectiva de planificación del viaje, organización de la información y evaluación de utilidad.
 
-## Qué todavía falta
+El trabajo vincula el análisis del clima con el acceso a información sanitaria para la preparación de viajes.
 
-- Contrastar calendario, ceros históricos y definición de casos con los recursos originales de MINSA.
-- Actualizar datos y reconstruir fechas de publicación antes de emitir pronósticos operativos.
-- Itinerarios de varias paradas, integración de avisos vigentes y pruebas con viajeros.
-- Validación de utilidad y de predicción operativa. No se ha demostrado reducción de contagios ni riesgo individual.
-- Otros países y enfermedades en la interfaz. Malaria y zoonosis permanecen como trabajo exploratorio fuera del piloto.
+## Conoce más
 
-## Datos y límites
-
-La demo lee `data/processed/dengueshield_dataset_integrado_REVISION.csv`: **5.376 filas**, etiquetas de año 2000–2025, cuatro provincias. Se conserva sin alterar el snapshot histórico del equipo. La fecha de extracción original no está acreditada; la última semana comienza el 28/12/2025 y su ventana llega al 03/01/2026, sin implicar datos actuales.
-
-- Los ceros existentes pueden proceder de rellenos anteriores. Una tabla sin celdas vacías no acredita cobertura completa.
-- Calendario **provisional**: domingo a sábado; semana 1 contiene el 4 de enero. Su equivalencia con MINSA está pendiente. El registro de Sullana, semana 53 de 2009, permanece en el reporte de revisión; no se reasigna.
-- Piura y Sullana tienen clima idéntico en las 1.357 semanas compartidas. Falta verificar representatividad espacial.
-- Los puntos NASA POWER no representan mediciones uniformes de toda la provincia.
-- No se calcula probabilidad personal de enfermar, ni se certifican destinos seguros.
-
-[Contrato y procedencia](docs/DATOS.md) · [Alcance](docs/ALCANCE.md) · [Estado y antecedentes](docs/ANTECEDENTES.md)
-
-## Comprobar y evaluar
-
-```bash
-python -m pip install -r requirements-dev.txt
-python -m pytest -q
-python scripts/audit_pilot.py
-# Elegir una carpeta nueva en cada ejecución:
-python -m src.models.evaluate --output reports/mi_evaluacion
-```
-
-El experimento entrena en 2001–2021, reporta validación 2022–2023 y prueba 2024. Predice conteos confirmados a 1 y 2 semanas; compara todos los métodos sobre las mismas fechas. Usa el snapshot revisado retrospectivamente, sin reconstruir los retrasos de publicación. **No alimenta pronósticos en la interfaz.**
-
-[Resultados ejecutados y limitaciones](reports/evaluacion_piloto_2026-11-08/README.md) · [Método](docs/EVALUACION.md)
-
-## Procesar archivos del equipo
-
-Desde la raíz, consultar `python -m src.data.cli --help`. Ejemplos:
-
-```bash
-python -m src.data.cli dengue --input /ruta/dengue.csv
-python -m src.data.cli zoonosis --input /ruta/zoonosis.csv
-python -m src.data.cli malaria --input /ruta/malaria_2000_2008.csv /ruta/malaria_2009_2025.csv
-python -m src.data.cli clima --input /ruta/clima_diario.csv
-# Descarga voluntaria de los recursos configurados; requiere conexión:
-python -m src.data.cli dengue --download
-```
-
-`--download` también admite malaria, zoonosis y clima (Open-Meteo 2001–2025). Una descarga fallida detiene el proceso. Estas descargas no se ejecutaron para esta entrega; se verificó la transformación con datos locales de prueba. Cada ejecución guarda copias de entrada, SHA-256, consulta y salidas en un directorio nuevo bajo `data/interim/`; nunca sobrescribe los CSV anteriores. Los adaptadores conservan la granularidad de registros y no certifican la calidad epidemiológica de la fuente.
-
-Las rutas antiguas de `Programas/Adquisición de datos/` y `scripts/test/` delegan al nuevo módulo y requieren `--input` o `--download`. Las salidas v2 tienen un esquema distinto; los notebooks antiguos se conservan como antecedentes y no se conectan automáticamente a ellas.
-
-## Organización
-
-| Ruta | Contenido actual |
-|---|---|
-| `streamlit_app.py` | Aplicación ejecutable |
-| `src/data/` | Calendario, validación, consulta y transformación |
-| `src/models/evaluate.py` | Evaluación retrospectiva por fechas |
-| `tests/` | Pruebas de datos, particiones y flujos de interfaz |
-| `reports/evaluacion_piloto_2026-11-08/` | Métricas, predicciones y manifiesto de la ejecución |
-| `notebooks/` | Exploraciones anteriores, sin modificación de resultados históricos |
-| `Programas/Adquisición de datos/` | Entradas compatibles y CSV exploratorios previos |
-| `docs/` | Alcance, fuentes, método y próximos pasos |
-
-Ingeniería Informática: datos, modelos e interfaz. Ingeniería Industrial: proceso de planificación y evaluación de utilidad. Asignación individual pendiente. [Equipo](docs/EQUIPO.md) · [Contribuir](CONTRIBUTING.md) · [Demo](docs/DEMO.md) · [Roadmap](docs/ROADMAP.md)
+- [Alcance del proyecto](docs/ALCANCE.md)
+- [Datos, fuentes y criterios de calidad](docs/DATOS.md)
+- [Metodología de evaluación](docs/EVALUACION.md)
+- [Resultados del experimento](reports/evaluacion_piloto_2026-11-08/README.md)
+- [Recorrido de la demo](docs/DEMO.md)
+- [Equipo](docs/EQUIPO.md)
+- [Guía para contribuir](CONTRIBUTING.md)
